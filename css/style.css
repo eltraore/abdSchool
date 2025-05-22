@@ -5,15 +5,17 @@
     --color-secondary: #d00000;
     --color-white: #ffffff;
     --color-black: #000000;
-    --color-gris: #F6F6F6;
-    --color-bleu: #8A94F3;
+    --color-grey: #F6F6F6;
+    --color-blue: #8A94F3;
+    --color-violet: #EAE2F7;
+
 }
 
 /* Styles de base */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: var(--color-gris);
+    background-color: var(--color-grey);
     margin: 0;
 }
 
@@ -31,14 +33,14 @@ h2 {
 }
 
 header {
-    background-color: var(--color-gris);
+    background-color: var(--color-grey);
     margin: 0 auto;
 }
 header h1{
     display: flex;
     flex-direction: column;
     font-size: 3rem;
-    color: var(--color-bleu);
+    color: var(--color-blue);
 }
 header h1 span{
     font-size: 2rem;
@@ -141,6 +143,7 @@ header h1 span{
     margin-top: 20px;
     padding: 10px 20px;
     border-radius: 20px;
+    font-size: 20px;
 }
 
 ul {
@@ -163,6 +166,21 @@ a:hover {
 
 footer {
     text-align: center;
-    padding: 1rem 0;
-    color: var(--color-primary);
+    padding: 1px 0;
+    background-color: var(--color-violet);
 } 
+
+@media screen and (max-width: 768px) {
+    .card{
+        max-width: 300px;
+    }
+    .cards{
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .services h2{
+        text-align: center;
+    }
+    
+}
