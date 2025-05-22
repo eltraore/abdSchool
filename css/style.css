@@ -6,7 +6,7 @@
     --color-white: #ffffff;
     --color-black: #000000;
     --color-grey: #F6F6F6;
-    --color-blue: #8A94F3;
+    --color-blue: #2f41dd;
     --color-violet: #EAE2F7;
 
 }
@@ -139,7 +139,7 @@ header h1 span{
 }
 .contact a{
     color: white;
-    background-color: #8A94F3;
+    background-color: var(--color-blue);
     margin-top: 20px;
     padding: 10px 20px;
     border-radius: 20px;
