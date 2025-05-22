@@ -1,0 +1,12 @@
+{
+  "name": "abd-school",
+  "version": "1.0.0",
+  "description": "Auto-École en ligne",
+  "scripts": {
+    "test": "htmlhint **/*.html"
+  },
+  "devDependencies": {
+    "htmlhint": "^1.1.4",
+    "@lhci/cli": "^0.12.0"
+  }
+} 
