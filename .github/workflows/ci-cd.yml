@@ -19,16 +19,13 @@ jobs:
         node-version: '18'
         
     - name: Install dependencies
-      run: |
-        npm install -g htmlhint
-        npm install -g lighthouse-ci
+      run: npm install
         
     - name: Check HTML
-      run: htmlhint "**/*.html"
+      run: npx htmlhint "**/*.html"
       
     - name: Run Lighthouse CI
-      run: |
-        lhci autorun
+      run: npx lhci autorun
         
     - name: Deploy to GitHub Pages
       if: github.ref == 'refs/heads/main'
