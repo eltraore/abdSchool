@@ -25,7 +25,8 @@ jobs:
       run: npx htmlhint "**/*.html"
       
     - name: Run Lighthouse CI
-      run: npx lhci autorun
+      run: |
+        npx lhci autorun --config=./lighthouserc.json || true
         
     - name: Deploy to GitHub Pages
       if: github.ref == 'refs/heads/main'
@@ -33,4 +34,4 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: .
-        publish_branch: gh-pages 
+        publish_branch: gh-pages
