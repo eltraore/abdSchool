@@ -85,7 +85,7 @@ Le workflow est déclenché à chaque push sur la branche `main`.
 
 ## Équipe
 
-### Groupe 9 - HETIC
+### Groupe 8 - HETIC
 
 - **Abdallah SAOUD** - 
 - **Steve MOTHMORA** -
