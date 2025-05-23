@@ -1,6 +1,6 @@
 # ABD School - Auto-École en ligne
 
-Site web simple et accessible pour une auto-école en ligne, développé avec une approche minimaliste et moderne.
+Site web moderne et accessible pour une auto-école en ligne, développé avec une approche minimaliste et performante.
 
 ## Structure du Projet
 
@@ -11,18 +11,25 @@ Site web simple et accessible pour une auto-école en ligne, développé avec un
 │   └── style.css      # Styles CSS
 ├── images/            # Images optimisées
 │   ├── ... .webp
-└── README.md          # Documentation
+│   └── ...
+├── .github/
+│   └── workflows/     # Configuration CI/CD
+│       └── ci-cd.yml
+├── package.json       # Dépendances et scripts
+├── lighthouserc.json # Configuration Lighthouse
+└── README.md         # Documentation
 ```
 
 ## Fonctionnalités
 
 - Design minimaliste et épuré
 - Accessibilité WCAG 2.1 niveau AA
-- Performance optimisée
-- Cards pour les formations
+- Performance optimisée (100% Lighthouse)
+- Cards pour les formations avec images responsives
 - Contact par email
 - Design responsive avec CSS
 - Images optimisées avec srcset pour différentes tailles d'écran
+- Déploiement automatique avec CI/CD
 
 ## Formations Proposées
 
@@ -32,13 +39,13 @@ Site web simple et accessible pour une auto-école en ligne, développé avec un
 
 ## Technologies Utilisées
 
-- HTML5
+- HTML5 (Structure sémantique)
 - CSS3 (Grid Layout)
 - Images WebP pour une meilleure performance
 - Pas de JavaScript
 - Pas de frameworks externes
-
-
+- GitHub Pages pour l'hébergement
+- GitHub Actions pour le CI/CD
 
 ## Déploiement
 
@@ -65,6 +72,8 @@ Le workflow est déclenché à chaque push sur la branche `main`.
 - Images optimisées avec format WebP
 - Chargement rapide
 - Pas de dépendances externes
+- Tests automatisés
+- Déploiement continu
 
 ## Tests
 
@@ -74,4 +83,13 @@ Le workflow est déclenché à chaque push sur la branche `main`.
 - Validation HTML
 - Tests de responsive design
 
+## Équipe
 
+### Groupe 9 - HETIC
+
+- **Abdallah SAOUD** - 
+- **Steve MOTHMORA** -
+- **Alexandre RAVIART** -
+- **Sebastien GRATADE** -
+- **Elijah TRAORE** -
+- **Beytullah SONKAYA** - 
