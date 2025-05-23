@@ -74,7 +74,11 @@ header h1 span{
     overflow: hidden;
     height: 400px;
     position: relative;
-
+    transition: transform 0.3s ease;
+    text-decoration: none;
+}
+.card:hover {
+    transform: translateY(-5px);
 }
 .services h2{
     font-size: 28px;
@@ -183,4 +187,93 @@ footer {
         text-align: center;
     }
     
+}
+
+/* Navigation */
+.nav-header {
+    background-color: var(--color-white);
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.nav-header nav {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-header ul {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-header a {
+    color: var(--color-primary);
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-header a[aria-current="page"] {
+    background-color: var(--color-blue);
+    color: var(--color-white);
+}
+
+.nav-header a:hover {
+    background-color: var(--color-grey);
+    text-decoration: none;
+}
+
+/* Styles pour les pages de formation */
+.formation-detail {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.formation-hero {
+    margin-bottom: 3rem;
+}
+
+.formation-hero img {
+    width: 100%;
+    height: auto;
+    border-radius: 25px;
+    object-fit: cover;
+}
+
+.formation-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.formation-info, .formation-description {
+    background-color: var(--color-white);
+    padding: 2rem;
+    border-radius: 25px;
+    box-shadow: 0 0 22.3px 1px rgba(0,0,0,0.25);
+}
+
+/* Media queries */
+@media screen and (max-width: 768px) {
+    .formation-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .nav-header ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .formation-content {
+        flex-direction: column;
+        gap: 2rem;
+    }
 }
