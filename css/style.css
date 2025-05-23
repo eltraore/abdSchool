@@ -1,5 +1,6 @@
 /* Variables */
 :root {
+    /* Couleurs principales */
     --color-primary: #1a1a1a;
     --color-secondary: #d00000;
     --color-white: #ffffff;
@@ -7,102 +8,85 @@
     --color-grey: #F6F6F6;
     --color-blue: #2f41dd;
     --color-violet: #EAE2F7;
+
 }
 
 /* Styles de base */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: var(--color-grey, #F6F6F6);
+    background-color: var(--color-grey);
     margin: 0;
 }
 
+
+
 h1 {
     text-align: center;
-    color: var(--color-primary, #1a1a1a);
+    color: var(--color-primary);
 }
 
 h2 {
-    color: var(--color-primary, #1a1a1a);
+    color: var(--color-primary);
     margin-top: 0px;
     text-align: left;
 }
 
 header {
-    background-color: var(--color-grey, #F6F6F6);
+    background-color: var(--color-grey);
     margin: 0 auto;
 }
-
-header h1 {
+header h1{
     display: flex;
     flex-direction: column;
     font-size: 3rem;
-    color: var(--color-blue, #2f41dd);
+    color: var(--color-blue);
 }
-
-header h1 span {
+header h1 span{
     font-size: 2rem;
-    color: var(--color-black, #000000);
+    color: black;
     font-style: italic;
 }
-
-.container,
-.services {
+.container{
     max-width: 1200px;
     margin: 0 auto;
 }
-
-/* Fallback sans flex pour .cards */
-.cards .card {
-    float: left;
-    width: 32%;
-    margin-right: 2%;
+.services{
+    max-width: 1200px;
+    margin: 0 auto;
 }
-.cards .card:nth-child(3n) {
-    margin-right: 0;
-}
+/* Styles pour les cards */
+.cards {
+    display: flex;
+    margin-top: 30px;
+    justify-content: space-between;
 
-/* Flex moderne pour .cards */
-@supports (display: flex) {
-    .cards {
-        display: flex;
-        margin-top: 30px;
-        justify-content: space-between;
-    }
-    .cards .card {
-        float: none;
-        width: auto;
-        margin-right: 0;
-    }
 }
-
+.card img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
 .card {
-    box-shadow: 0px 0px 22.3px 1px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 0px 22.3px 1px #00000040;
     border-radius: 25px;
     max-width: 360px;
     overflow: hidden;
     height: 400px;
     position: relative;
-}
 
-.services h2 {
+}
+.services h2{
     font-size: 28px;
 }
-
-.card img {
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
-}
-
 .card-content {
     position: relative;
     z-index: 2;
-    color: var(--color-white, #ffffff);
+    color: var(--color-white);
 }
 
 .card h3 {
-    color: var(--color-white, #ffffff);
+    color: var(--color-white);
     font-size: 1.5rem;
     position: absolute;
     bottom: 15px;
@@ -111,48 +95,29 @@ header h1 span {
 }
 
 .card p {
-    color: var(--color-black, #000000);
-    background-color: var(--color-white, #ffffff);
+    color: var(--color-white);
+    margin: 0;
+    top: 20px;
+    position: absolute;
+    color: black;
+    background-color: white;
     border-radius: 18px;
     padding: 3px 8px;
     left: 20px;
     font-weight: bold;
     font-size: 14px;
-    position: absolute;
-    top: 20px;
 }
 
-/* Fallback pour .contact (pas de flex) */
-.contact {
+.contact{
     margin-top: 7rem;
-    background-color: var(--color-white, #ffffff);
+    background-color: white;
     border-radius: 70px 70px 0 0;
     padding: 8rem 1rem;
-    text-align: center; /* Centrage horizontal */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-.contact > * {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    float: none;
-    clear: both;
-}
-
-/* Flex moderne pour .contact */
-@supports (display: flex) {
-    .contact {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: initial;
-    }
-    .contact > * {
-        margin-left: 0;
-        margin-right: 0;
-    }
-}
-
-.surtitre {
+.surtitre{
     font-size: 14px;
     background-color: #F7F7F7;
     padding: 2px 15px;
@@ -161,22 +126,20 @@ header h1 span {
     font-weight: bold;
     letter-spacing: 1px;
 }
-
-.contact h2 {
+.contact h2{
     font-size: 4rem;
     margin: 0;
 }
-
-.contact p {
+.contact p{
     font-size: 20px;
     margin: 0 auto;
     text-align: center;
     max-width: 800px;
-}
 
-.contact a {
-    color: var(--color-white, #ffffff);
-    background-color: var(--color-blue, #2f41dd);
+}
+.contact a{
+    color: white;
+    background-color: var(--color-blue);
     margin-top: 20px;
     padding: 10px 20px;
     border-radius: 20px;
@@ -193,7 +156,7 @@ li {
 }
 
 a {
-    color: var(--color-secondary, #d00000);
+    color: var(--color-secondary);
     text-decoration: none;
 }
 
@@ -204,21 +167,20 @@ a:hover {
 footer {
     text-align: center;
     padding: 1px 0;
-    background-color: var(--color-violet, #EAE2F7);
-}
+    background-color: var(--color-violet);
+} 
 
-/* Responsive */
 @media screen and (max-width: 768px) {
-    .card {
+    .card{
         max-width: 300px;
-        float: none;
     }
-    .cards {
+    .cards{
         flex-direction: column;
         align-items: center;
         gap: 20px;
     }
-    .services h2 {
+    .services h2{
         text-align: center;
     }
+    
 }
